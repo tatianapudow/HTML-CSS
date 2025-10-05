@@ -1,0 +1,177 @@
+/* ================== Общий сброс ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================== Body ================== */
+body {
+    background-color: #f4f4f4; /* светло-серый фон */
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* ================== Header ================== */
+header, .header {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+header:hover, .header:hover {
+    background-color: #c8a2ff; /* сиреневый при наведении */
+}
+
+header h2, .header-title {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+
+ol {
+    padding-left: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    caption-side: top;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #e0e0e0;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+
+dl {
+    margin-bottom: 15px;
+}
+
+dt {
+    font-weight: bold;
+    color: #555;
+}
+
+dd {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #c8a2ff;
+}
+
+
+img, video {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #c8a2ff; /* сиреневый при наведении */
+    color: #fff;
+}
