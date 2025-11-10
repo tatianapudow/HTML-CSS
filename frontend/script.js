@@ -31,3 +31,70 @@ postForm?.addEventListener('submit', async (e) => {
 
 // Загружаем посты при открытии страницы
 loadPosts();
+
+if (path.includes('index.html')) {
+  loadPosts();
+  setupNewPostForm();
+}
+
+if (path.includes('profile.html')) {
+  loadProfileData();
+  document.getElementById('logoutBtn')?.addEventListener('click', logout);
+}
+
+if (path.includes('user_posts.html')) {
+  const params = new URLSearchParams(window.location.search);
+  const userId = params.get('id');
+  loadUserPosts(userId);
+}
+
+if (path.includes('gallery.html')) {
+  loadGallery();
+  setupUploadForm();
+}
+
+if (path.includes('my_music.html')) {
+  loadMusic();
+  setupPlayer();
+}
+
+if (path.includes('friends.html')) {
+  loadFriends();
+  setupFriendActions();
+}
+
+// Загружаем список друзей из localStorage
+let friends = JSON.parse(localStorage.getItem('friends')) || ["Ника", "Соня", "Милен"];
+const list = document.getElementById('friendsList');
+const input = document.getElementById('newFriend');
+const addBtn = document.getElementById('addFriendBtn');
+
+function renderFriends() {
+  list.innerHTML = '';
+  friends.forEach((name, index) => {
+    const li = document.createElement('li');
+    li.innerHTML = `${name} <button class="delete-btn">Удалить</button>`;
+    li.querySelector('.delete-btn').addEventListener('click', () => {
+      friends.splice(index, 1);
+      saveAndRender();
+    });
+    list.appendChild(li);
+  });
+}
+
+function saveAndRender() {
+  localStorage.setItem('friends', JSON.stringify(friends));
+  renderFriends();
+}
+
+addBtn.addEventListener('click', () => {
+  const name = input.value.trim();
+  if (name) {
+    friends.push(name);
+    input.value = '';
+    saveAndRender();
+  }
+});
+
+// при загрузке страницы
+renderFriends();

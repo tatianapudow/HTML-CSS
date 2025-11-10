@@ -17,18 +17,23 @@
                 <a href="gallery.html">Галерея</a>
             </nav>
     </header>
-    <main>
-        <section>
-            <h2>Мои Друзья</h2>
-            <ul>
-                <li>Ника </li>
-                <li>Соня</li>
-                <li>Милен</li> 
-            </ul>
-            
-            <a href="user_posts.html"><h3>Посты друзей</h3></a>
-        </section>
-    </main>
+<main>
+  <section>
+    <h2>Мои Друзья</h2>
+    <ul id="friendsList">
+      <li>Ника <button class="delete-btn">Удалить</button></li>
+      <li>Соня <button class="delete-btn">Удалить</button></li>
+      <li>Милен <button class="delete-btn">Удалить</button></li>
+    </ul>
+
+    <input type="text" id="newFriend" placeholder="Имя нового друга">
+    <button id="addFriendBtn">Добавить</button>
+
+    <a href="user_posts.html"><h3>Посты друзей</h3></a>
+  </section>
+</main>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
