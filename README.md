@@ -31,7 +31,7 @@ git clone <repository-url>
 2. Перейдите в папку проекта:
 
 ```bash
-cd <project-name>
+cd backend
 ```
 
 3. Установите зависимости:
